@@ -16,12 +16,12 @@ const navLinks = [
 function MobileFullScreenNavMenu() {
 
   return (
-    <nav className="md:hidden fixed inset-0 z-40 bg-steel-blue flex justify-center">
+    <nav className="md:hidden fixed inset-0 z-40 bg-main flex justify-center">
       <ul className="flex-row items-center p-6 text-xl text-center">
         {navLinks.map((link, index) => (
           <li className="my-3" key={index}>
             <Link
-              className="text-white no-underline"
+              className="text-white hover:text-accent active:text-accent no-underline"
               key={link.title}
               to={link.route}
             >
@@ -46,15 +46,18 @@ function Header() {
   `);
 
   return (
-    <header className="bg-steel-blue">
+    <header className="bg-main">
       <div className="flex flex-wrap justify-between max-w-4xl mx-auto md:p-8">
-        <div className="bg-geraldine flex-grow p-4">
+        <div className="bg-accent flex-grow p-4">
           <Link to="/">
-            <h1 className="flex items-center text-white no-underline">
+            <h1 className="flex items-center text-white">
               <span className="text-xl font-bold tracking-tight">
                 {site.siteMetadata.title}
               </span>
             </h1>
+            <p className="text-sm text-white">
+                NLP Coach
+            </p>
           </Link>
         </div>
         <div className="m-4">
@@ -75,7 +78,7 @@ function Header() {
           <nav className="hidden md:block md:flex md:items-center w-full md:w-auto">
             {navLinks.map((link) => (
               <Link
-                className="block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6"
+                className="block mt-4 text-white hover:text-accent no-underline md:inline-block md:mt-0 md:ml-6"
                 key={link.title}
                 to={link.route}
               >
