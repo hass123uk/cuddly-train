@@ -2,6 +2,7 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import Container from "../components/container";
 import womanPicture from "../images/edward-cisneros-_H6wpor9mjs-unsplash.jpg";
 
 function IndexPage() {
@@ -13,11 +14,24 @@ function IndexPage() {
       />
 
       <section>
-        <img 
+        <img
           alt="A picture of a woman standing outside smiling"
           className="block w-100"
           src={womanPicture}
         />
+        <Container className="bg-main text-white text-center">
+          <h1 className="text-xl font-bold">
+            Life Coach &amp; Certified NLP Practitioner
+          </h1>
+          <p className="text-md ">Helping you to get through it.</p>
+          <button
+            type="button"
+            className="bg-accent rounded-full py-2 px-4 my-5"
+            aria-label="Go to contact me page" aria-controls="navigation"
+          >
+            Work with me
+          </button>
+        </Container>
       </section>
 
       {/* <section className="text-center">
