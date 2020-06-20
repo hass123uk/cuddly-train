@@ -2,17 +2,25 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import catAndHumanIllustration from "../images/cat-and-human-illustration.svg";
+import womanPicture from "../images/edward-cisneros-_H6wpor9mjs-unsplash.jpg";
 
 function IndexPage() {
   return (
     <Layout>
       <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        keywords={[`life coach`, `counseling`, `nlp coach`]}
         title="Home"
       />
 
-      <section className="text-center">
+      <section>
+        <img 
+          alt="A picture of a woman standing outside smiling"
+          className="block w-100"
+          src={womanPicture}
+        />
+      </section>
+
+      {/* <section className="text-center">
         <img
           alt="Cat and human sitting on a couch"
           className="block w-1/2 mx-auto mb-8"
@@ -35,7 +43,7 @@ function IndexPage() {
           </a>
           , a utility-first CSS framework.
         </p>
-      </section>
+      </section> */}
     </Layout>
   );
 }
