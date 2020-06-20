@@ -1,10 +1,6 @@
 import { graphql, useStaticQuery, Link } from "gatsby";
-import PropTypes from "prop-types";
 import React, { useState } from "react";
-//import Modal from './modal';
-
-import MenuIcon from "../images/menu.inline.svg";
-import CloseIcon from "../images/close.inline.svg";
+import '../css/hamburgers.min.css';
 
 const navLinks = [
   {
@@ -17,24 +13,10 @@ const navLinks = [
   },
 ];
 
-function MobileFullScreenNavMenu({ onClose }) {
-
-  const handleClose = (e) => {
-    e.preventDefault();
-    onClose()
-  };
+function MobileFullScreenNavMenu() {
 
   return (
-    <nav className="md:hidden fixed inset-0 z-50 bg-steel-blue flex justify-center">
-
-      <buton className="absolute top-0 bottom-0 right-0 px-6 py-5 text-white"
-        type="button"
-        aria-label="Close menu" aria-controls="navigation">
-        <CloseIcon title="close"
-          className="w-5 h-5 font-thin fill-current"
-          onClick={handleClose} />
-      </buton>
-
+    <nav className="md:hidden fixed inset-0 z-40 bg-steel-blue flex justify-center">
       <ul className="flex-row items-center p-6 text-xl text-center">
         {navLinks.map((link, index) => (
           <li className="my-3" key={index}>
@@ -51,10 +33,6 @@ function MobileFullScreenNavMenu({ onClose }) {
   );
 }
 
-MobileFullScreenNavMenu.propTypes = {
-  onClose: PropTypes.func.isRequired
-}
-
 function Header() {
   const [isExpanded, setExpansion] = useState(false);
   const { site } = useStaticQuery(graphql`
@@ -66,10 +44,6 @@ function Header() {
       }
     }
   `);
-
-  const handleMenuClose = () => {
-    setExpansion(false);
-  }
 
   return (
     <header className="bg-steel-blue">
@@ -85,13 +59,18 @@ function Header() {
         </div>
         <div className="m-4">
           <button
-            className="px-2 py-1 text-white md:hidden"
+            className={`md:hidden relative z-50
+                        hamburger hamburger--spring ${isExpanded ? 'is-active' : ''}`}
+            type="button"
             aria-label="Menu" aria-controls="navigation"
-            onClick={() => setExpansion(true)}
+            onClick={() => setExpansion(!isExpanded)}
           >
-            <MenuIcon title="Menu" className="w-5 h-5 fill-current" />
+            <span className="hamburger-box ">
+              <span className="hamburger-inner bg-white"></span>
+            </span>
+
           </button>
-          {isExpanded ? <MobileFullScreenNavMenu onClose={handleMenuClose} /> : null}
+          {isExpanded ? <MobileFullScreenNavMenu /> : null}
 
           <nav className="hidden md:block md:flex md:items-center w-full md:w-auto">
             {navLinks.map((link) => (
