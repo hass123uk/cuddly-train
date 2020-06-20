@@ -64,7 +64,7 @@ function Header() {
           </div>
           <div className="m-4">
             <button
-              className={`md:hidden relative z-50
+              className={`md:hidden! relative z-50
                         hamburger hamburger--spring ${isExpanded ? 'is-active' : ''}`}
               type="button"
               aria-label="Menu" aria-controls="navigation"

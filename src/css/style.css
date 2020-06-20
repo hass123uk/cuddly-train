@@ -1,5 +1,16 @@
 /*! purgecss start ignore */
+
 @tailwind base;
 @tailwind components;
 /*! purgecss end ignore */
+
 @tailwind utilities;
+.hidden\! {
+    display: none !important;
+}
+
+@media (min-width: 768px) {
+    .md\:hidden\! {
+        display: none !important;
+    }
+}
