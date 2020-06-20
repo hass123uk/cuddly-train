@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery, Link } from "gatsby";
 import React, { useState } from "react";
 import '../css/hamburgers.min.css';
+import fbImg from '../images/fb.webp'
 
 const navLinks = [
   {
@@ -47,45 +48,54 @@ function Header() {
 
   return (
     <header className="bg-main">
-      <div className="flex flex-wrap justify-between max-w-4xl mx-auto md:p-8">
-        <div className="bg-accent flex-grow p-4">
-          <Link to="/">
-            <h1 className="flex items-center text-white">
-              <span className="text-xl font-bold tracking-tight">
-                {site.siteMetadata.title}
-              </span>
-            </h1>
-            <p className="text-sm text-white">
+      <div className="max-w-4xl mx-auto">
+        <div className="flex flex-wrap justify-between md:p-8">
+          <div className="bg-accent flex-grow p-4">
+            <Link to="/">
+              <h1 className="flex items-center text-white">
+                <span className="text-xl font-bold tracking-tight">
+                  {site.siteMetadata.title}
+                </span>
+              </h1>
+              <p className="text-sm text-white">
                 NLP Coach
             </p>
-          </Link>
-        </div>
-        <div className="m-4">
-          <button
-            className={`md:hidden relative z-50
+            </Link>
+          </div>
+          <div className="m-4">
+            <button
+              className={`md:hidden relative z-50
                         hamburger hamburger--spring ${isExpanded ? 'is-active' : ''}`}
-            type="button"
-            aria-label="Menu" aria-controls="navigation"
-            onClick={() => setExpansion(!isExpanded)}
-          >
-            <span className="hamburger-box ">
-              <span className="hamburger-inner bg-white"></span>
-            </span>
+              type="button"
+              aria-label="Menu" aria-controls="navigation"
+              onClick={() => setExpansion(!isExpanded)}
+            >
+              <span className="hamburger-box ">
+                <span className="hamburger-inner bg-white"></span>
+              </span>
 
-          </button>
-          {isExpanded ? <MobileFullScreenNavMenu /> : null}
+            </button>
+            {isExpanded ? <MobileFullScreenNavMenu /> : null}
 
-          <nav className="hidden md:block md:flex md:items-center w-full md:w-auto">
-            {navLinks.map((link) => (
-              <Link
-                className="block mt-4 text-white hover:text-accent no-underline md:inline-block md:mt-0 md:ml-6"
-                key={link.title}
-                to={link.route}
-              >
-                {link.title}
-              </Link>
-            ))}
-          </nav>
+            <nav className="hidden md:block md:flex md:items-center w-full md:w-auto">
+              {navLinks.map((link) => (
+                <Link
+                  className="block mt-4 text-white hover:text-accent no-underline md:inline-block md:mt-0 md:ml-6"
+                  key={link.title}
+                  to={link.route}
+                >
+                  {link.title}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        </div>
+        <div className="p-2 md:hidden">
+          <img
+            alt="Facebook icon"
+            className="w-5 h-5 block mx-2"
+            src={fbImg}
+          ></img>
         </div>
       </div>
     </header>
