@@ -62,7 +62,7 @@ function Header() {
             </p>
             </Link>
           </div>
-          <div className="m-4">
+          <div className="my-2 mt-3">
             <button
               className={`md:hidden! relative z-50
                         hamburger hamburger--spring ${isExpanded ? 'is-active' : ''}`}
