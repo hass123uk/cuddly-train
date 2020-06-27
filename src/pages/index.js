@@ -3,7 +3,7 @@ import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Container from "../components/container";
-import womanPicture from "../images/edward-cisneros-_H6wpor9mjs-unsplash.jpg";
+import portraitPicture from "../images/portrait.jpg";
 
 function IndexPage() {
   return (
@@ -17,7 +17,7 @@ function IndexPage() {
         <img
           alt="A picture of a woman standing outside smiling"
           className="block w-100"
-          src={womanPicture}
+          src={portraitPicture}
         />
         <Container className="bg-main text-white text-center">
           <h1 className="text-xl font-bold">
