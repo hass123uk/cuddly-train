@@ -11,32 +11,34 @@ function ContactPage() {
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
         title="Contact"
       />
-      <Container>
+      <Container className="bg-main text-white">
         <section>
-          <form className="mx-auto md:w-1/2">
-            <p className="mb-8 leading-loose">
-              Here is an example of a form built using the official Tailwind CSS
-            Custom Forms plugin.{` `}
-              <a
+          {/* className="mx-auto md:w-1/2" */}
+          <form >
+            <h1 className="text-xl font-bold leading-loose text-center text-accent">
+              Let&apos;s Connect
+            </h1>
+            <p className="mb-8 leading-loose text-center text-sm">
+              <a href="mailto:someone@example.com">info@example.com</a>
+            </p>
+            {/* <a
                 className="font-bold text-gray-700 no-underline"
                 href="https://github.com/tailwindcss/custom-forms"
-                target="_blank"
+                target="email"
                 rel="noopener noreferrer"
               >
                 Read the docs
-            </a>
-            .
-          </p>
+            </a> */}
 
             <label
               className="block mb-2 text-xs font-bold uppercase"
               htmlFor="first-name"
             >
               First Name
-          </label>
+            </label>
 
             <input
-              className="w-full mb-6 form-input"
+              className="w-full mb-6 form-input text-black"
               id="first-name"
               placeholder="Bill"
               type="text"
@@ -47,13 +49,27 @@ function ContactPage() {
               htmlFor="last-name"
             >
               Last Name
-          </label>
+            </label>
 
             <input
-              className="w-full mb-6 form-input"
+              className="w-full mb-6 form-input text-black"
               id="last-name"
               placeholder="Murray"
               type="text"
+            />
+
+            <label
+              className="block mb-2 text-xs font-bold uppercase"
+              htmlFor="email"
+            >
+              Email
+            </label>
+
+            <input
+              className="w-full mb-6 form-input text-black"
+              id="email"
+              placeholder="email@example.com"
+              type="mail"
             />
 
             <label
@@ -64,15 +80,17 @@ function ContactPage() {
           </label>
 
             <textarea
-              className="w-full mb-6 form-textarea"
+              className="w-full mb-6 form-textarea text-black"
               id="message"
               placeholder="Say something..."
               rows="8"
             />
+            <div className=" mx-auto ">
 
-            <button className="px-4 py-2 text-sm font-bold text-white bg-gray-700 border-b-4 border-gray-800 rounded hover:border-gray-700 hover:bg-gray-600">
+            <button className="rounded py-2 px-4 text-sm font-bold text-white bg-accent border-accent hover:bg-main">
               Submit
           </button>
+            </div>
           </form>
         </section>
       </Container>
