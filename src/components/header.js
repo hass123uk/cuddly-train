@@ -1,18 +1,6 @@
 import { graphql, useStaticQuery, Link } from "gatsby";
 import React from "react";
-import BurgerMenu from "./nav-menu";
 import fbImg from "../images/fb.webp";
-
-const navLinks = [
-  {
-    route: `/my-story`,
-    title: `My Story`,
-  },
-  {
-    route: `/contact`,
-    title: `Contact`,
-  },
-];
 
 function Header() {
   const { site } = useStaticQuery(graphql`
@@ -27,30 +15,25 @@ function Header() {
   `);
 
   return (
-    <header className="bg-main">
-      <div className="max-w-4xl mx-auto">
-        <div className="flex flex-wrap justify-between md:p-8">
-          <div className="bg-accent flex-grow p-4">
-            <Link to="/">
-              <h1 className="flex items-center text-white">
-                <span className="text-xl font-bold tracking-tight">
-                  {site.siteMetadata.title}
-                </span>
-              </h1>
-              <p className="text-sm text-white">
-                {site.siteMetadata.description}
-              </p>
-            </Link>
-          </div>
-          <BurgerMenu links={navLinks}/>
-        </div>
-        <div className="p-2 md:hidden">
+    <header className="bg-accent flex flex-wrap justify-between md:p-8">
+      <div className="flex-grow p-4">
+        <Link to="/">
+          <h1 className="flex items-center text-white">
+            <span className="text-xl font-bold tracking-tight">
+              {site.siteMetadata.title}
+            </span>
+          </h1>
+          <p className="text-sm text-white">{site.siteMetadata.description}</p>
+        </Link>
+      </div>
+      <div className="flex flex-col justify-center">
+        <Link>
           <img
             alt="Facebook icon"
-            className="w-5 h-5 block mx-2"
+            className="bg-main w-8 h-8 block mx-3 my-1 rounded-full"
             src={fbImg}
           ></img>
-        </div>
+        </Link>
       </div>
     </header>
   );
