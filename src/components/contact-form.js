@@ -29,7 +29,6 @@ export default function ContactForm() {
       <input
         className="w-full mb-6 form-input text-black"
         id="first-name"
-        placeholder="Bill"
         type="text"
       />
 
@@ -43,7 +42,6 @@ export default function ContactForm() {
       <input
         className="w-full mb-6 form-input text-black"
         id="last-name"
-        placeholder="Murray"
         type="text"
       />
 
@@ -54,7 +52,6 @@ export default function ContactForm() {
       <input
         className="w-full mb-6 form-input text-black"
         id="email"
-        placeholder="email@example.com"
         type="mail"
       />
 
