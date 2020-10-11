@@ -68,8 +68,8 @@ export default function ContactForm() {
         placeholder="Say something..."
         rows="8"
       />
-      <div className=" mx-auto ">
-        <button className="rounded py-2 px-4 text-sm font-bold text-white bg-accent border-accent hover:bg-main">
+      <div className="text-center">
+        <button className="rounded-full py-2 px-8 text-lg font-bold text-white bg-accent border-accent">
           Submit
         </button>
       </div>
