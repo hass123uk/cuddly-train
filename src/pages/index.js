@@ -23,7 +23,7 @@ function IndexPage() {
             Life Coach &amp; Certified NLP Practitioner
           </h1>
           <p className="text-md ">Helping you to get through it.</p>
-          <Link to="/contact">
+          <Link to="#contact">
             <button
               type="button"
               className="bg-accent rounded-full py-2 px-4 my-5"
@@ -66,7 +66,7 @@ function IndexPage() {
         </p>
       </Container>
       <Container className="bg-main text-white">
-        <section>
+        <section id="contact">
           <ContactForm />
         </section>
       </Container>
