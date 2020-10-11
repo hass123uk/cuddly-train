@@ -4,12 +4,12 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Container from "../components/container";
 
-function AboutPage() {
+function MyStoryPage() {
   return (
     <Layout>
       <SEO
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-        title="About"
+        title="My Story"
       />
       <Container className="bg-accent text-white text-center">
         <h1 className="text-4xl font-bold leading-loose">My story</h1>
@@ -42,4 +42,4 @@ function AboutPage() {
   );
 }
 
-export default AboutPage;
+export default MyStoryPage;

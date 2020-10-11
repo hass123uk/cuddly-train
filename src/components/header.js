@@ -5,8 +5,8 @@ import fbImg from '../images/fb.webp'
 
 const navLinks = [
   {
-    route: `/about`,
-    title: `About`,
+    route: `/my-story`,
+    title: `My Story`,
   },
   {
     route: `/contact`,
