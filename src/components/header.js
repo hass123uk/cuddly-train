@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery, Link } from "gatsby";
-import React, { useState } from "react";
-import '../css/hamburgers.min.css';
-import fbImg from '../images/fb.webp'
+import React from "react";
+import BurgerMenu from "./nav-menu";
+import fbImg from "../images/fb.webp";
 
 const navLinks = [
   {
@@ -14,33 +14,13 @@ const navLinks = [
   },
 ];
 
-function MobileFullScreenNavMenu() {
-
-  return (
-    <nav className="md:hidden fixed inset-0 z-40 bg-main flex justify-center">
-      <ul className="flex-row items-center p-6 text-xl text-center">
-        {navLinks.map((link, index) => (
-          <li className="my-3" key={index}>
-            <Link
-              className="text-white hover:text-accent active:text-accent no-underline"
-              key={link.title}
-              to={link.route}
-            >
-              {link.title}
-            </Link>
-          </li>))}
-      </ul>
-    </nav>
-  );
-}
-
 function Header() {
-  const [isExpanded, setExpansion] = useState(false);
   const { site } = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
           title
+          description
         }
       }
     }
@@ -58,37 +38,11 @@ function Header() {
                 </span>
               </h1>
               <p className="text-sm text-white">
-                NLP Coach
-            </p>
+                {site.siteMetadata.description}
+              </p>
             </Link>
           </div>
-          <div className="my-2 mt-3">
-            <button
-              className={`md:hidden! relative z-50
-                        hamburger hamburger--spring ${isExpanded ? 'is-active' : ''}`}
-              type="button"
-              aria-label="Menu" aria-controls="navigation"
-              onClick={() => setExpansion(!isExpanded)}
-            >
-              <span className="hamburger-box ">
-                <span className="hamburger-inner bg-white"></span>
-              </span>
-
-            </button>
-            {isExpanded ? <MobileFullScreenNavMenu /> : null}
-
-            <nav className="hidden md:block md:flex md:items-center w-full md:w-auto">
-              {navLinks.map((link) => (
-                <Link
-                  className="block mt-4 text-white hover:text-accent no-underline md:inline-block md:mt-0 md:ml-6"
-                  key={link.title}
-                  to={link.route}
-                >
-                  {link.title}
-                </Link>
-              ))}
-            </nav>
-          </div>
+          <BurgerMenu links={navLinks}/>
         </div>
         <div className="p-2 md:hidden">
           <img
