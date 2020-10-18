@@ -9,6 +9,7 @@ module.exports = {
         'main': '#2C2E83',
         'accent': '#EB6C6B',
         'accent2': '#FEF0E4',
+        'accent3': '#FEF0E3',
       }
     }
   },

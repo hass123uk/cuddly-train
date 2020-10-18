@@ -15,7 +15,7 @@ function Header() {
   `);
 
   return (
-    <header className="bg-accent flex flex-wrap justify-between md:p-8">
+    <header className="bg-accent flex flex-wrap justify-between">
       <div className="flex-grow p-4">
         <Link to="/">
           <h1 className="flex items-center text-white">

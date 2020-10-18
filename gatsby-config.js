@@ -18,7 +18,7 @@ module.exports = {
         name: `gatsby-starter-tailwind`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: fullConfig.theme.colors.white,
+        background_color: fullConfig.theme.colors.accent3,
         theme_color: fullConfig.theme.colors.blue["700"],
         display: `minimal-ui`,
         //icon: `src/images/tailwind-icon.png`,
