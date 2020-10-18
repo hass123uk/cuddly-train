@@ -14,8 +14,8 @@ function IndexPage() {
 
       <section>
         <img
-          alt="A picture of a woman standing outside smiling"
-          className="block w-100"
+          alt="A picture of a woman smiling"
+          className="block w-100 md:w-1/3 "
           src={portraitPicture}
         />
         <Container className="bg-main text-white text-center">
