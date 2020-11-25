@@ -14,6 +14,13 @@ module.exports = {
       minWidth: {
         "980": "980px",
       },
+      width: {
+        "452": "452px",
+      },
+      height: {
+        "500": "500px",
+        "667": "667px",
+      },
     },
   },
   variants: {
