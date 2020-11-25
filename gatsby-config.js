@@ -15,8 +15,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-tailwind`,
-        short_name: `starter`,
+        name: `nlp-site-blog`,
+        short_name: `nlp`,
         start_url: `/`,
         background_color: fullConfig.theme.colors.accent3,
         theme_color: fullConfig.theme.colors.blue["700"],
