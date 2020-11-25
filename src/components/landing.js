@@ -10,7 +10,7 @@ function Landing() {
         <img
           src={portraitPicture}
           alt="A picture of a woman smiling"
-          className="w-100 h-500 md:h-667 md:w-452 md:absolute md:right-32 md:bottom-12"
+          className="mt-4 w-100 h-500 md:h-667 md:w-452 md:absolute md:right-32 md:bottom-12"
         />
 
         <div className="max-w-4xl py-4 md:py-0 md:max-w-full md:mb-64 md:grid md:grid-cols-3 md:mx-auto">
