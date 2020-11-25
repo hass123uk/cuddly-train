@@ -1,13 +1,13 @@
 {
-  "name": "gatsby-starter-tailwind",
-  "description": "Gatsby starter styled with Tailwind",
-  "version": "4.0.0",
-  "author": "Taylor Bryant <taylor@bryant.io>",
+  "name": "nlp-site",
+  "description": "Diane Mahmud personal website.",
+  "version": "0.0.1",
+  "author": "Hassan Mahmud",
   "dependencies": {
     "gatsby": "2.23.3",
     "gatsby-plugin-manifest": "2.4.11",
     "gatsby-plugin-offline": "3.2.9",
-    "gatsby-plugin-postcss": "2.3.4",
+    "gatsby-plugin-postcss": "^3.2.0",
     "gatsby-plugin-react-helmet": "3.3.4",
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sharp": "2.6.11",
@@ -48,6 +48,7 @@
     "eslint-plugin-import": "2.21.2",
     "eslint-plugin-react": "7.20.0",
     "gatsby-plugin-eslint": "2.0.8",
+    "postcss": "^8.1.10",
     "prettier": "2.0.5",
     "tailwindcss": "2.0.1"
   },

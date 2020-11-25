@@ -1,6 +1,7 @@
 // See https://tailwindcss.com/docs/configuration for details
 module.exports = {
   purge: ["./src/**/*.js"],
+  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
@@ -15,7 +16,9 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    extend: {},
+  },
   // https://github.com/tailwindcss/custom-forms
   plugins: [require("@tailwindcss/custom-forms")],
 };
