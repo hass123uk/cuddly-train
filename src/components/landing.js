@@ -4,21 +4,17 @@ import portraitPicture from "../images/portrait.jpg";
 
 function Landing() {
   return (
-    <section className="md:h-screen md:mb-64 md:relative">
+    <section className="md:h-screen">
       <div className="bg-main">
-        
         <img
           src={portraitPicture}
           alt="A picture of a woman smiling"
-          className="mt-4 w-100 h-500 md:h-667 md:w-452 md:absolute md:right-32 md:bottom-12"
+          className="md:hidden mt-4 w-100 h-500"
         />
 
-        <div className="max-w-4xl py-4 md:py-0 md:max-w-full md:mb-64 md:grid md:grid-cols-3 md:mx-auto">
-          <div className="flex flex-col col-span-2 justify-center text-white text-center">
-            <h1
-              className="text-xl font-bold
-             md:text-5xl md:self-center md:text-left md:ml-6"
-            >
+        <div className="max-w-4xl py-4 md:py-0 md:max-w-full md:mb-64 md:grid md:grid-cols-2 md:mx-auto">
+          <div className="flex flex-col justify-center text-white text-center md:text-left md:pl-32">
+            <h1 className="text-xl font-bold md:text-7xl">
               Life Coach &amp; Certified NLP Practitioner
             </h1>
             <p className="text-md">Helping you to get through it.</p>
@@ -33,11 +29,18 @@ function Landing() {
               </button>
             </Link>
           </div>
+          <div className="md:relative">
+            <img
+              src={portraitPicture}
+              alt="A picture of a woman smiling"
+              className="hidden md:block h-667 w-452 absolute right-20 top-64"
+            />
 
-          <div
-            style={{ "max-width": "217px", height: 600, width: 217 }}
-            className="hidden md:block bg-accent md:ml-auto md:mt-32 col-end-4 row-end-1"
-          ></div>
+            <div
+              style={{ "max-width": "217px", height: 600, width: 217 }}
+              className="hidden md:block bg-accent md:ml-auto md:mt-32"
+            ></div>
+          </div>
         </div>
       </div>
     </section>
