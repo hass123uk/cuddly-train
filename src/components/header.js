@@ -1,8 +1,9 @@
 import { graphql, useStaticQuery, Link } from "gatsby";
 import React from "react";
+import PropTypes from "prop-types";
 import fbImg from "../images/fb.webp";
 
-function Header() {
+function Header({ className }) {
   const { site } = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -15,7 +16,7 @@ function Header() {
   `);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-10 bg-accent flex flex-wrap justify-between md:min-w-980">
+    <header className={`${className} bg-accent flex flex-wrap justify-between`}>
       <div className="flex-grow p-4 md:flex-none md:px-8">
         <Link to="/">
           <h1 className="flex items-center text-white">
@@ -27,9 +28,7 @@ function Header() {
         </Link>
       </div>
       <div className="bg-main flex md:flex-grow md:justify-between">
-        <div className="flex">
-          {/* TODO: Add navigation. */}
-        </div>
+        <div className="flex">{/* TODO: Add navigation. */}</div>
         <div className="flex flex-col justify-center">
           <Link>
             <img
@@ -43,5 +42,9 @@ function Header() {
     </header>
   );
 }
+
+Header.propTypes = {
+  className: PropTypes.string.isRequired,
+};
 
 export default Header;
