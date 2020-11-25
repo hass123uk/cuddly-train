@@ -4,7 +4,7 @@ import React from 'react';
 function Container({ children, className }) {
     return (
         // md:px-8 md:py-16 Styles for desktop pre-grid
-        <div className={`max-w-4xl px-4 py-8 mx-auto ${className ? className : ''}`}>
+        <div className={`max-w-4xl px-4 py-8 mx-auto md:max-w-full ${className ? className : ''}`}>
             {children}
         </div>
     );
