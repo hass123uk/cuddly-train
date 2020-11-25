@@ -15,7 +15,7 @@ function Header() {
   `);
 
   return (
-    <header className="bg-accent flex flex-wrap justify-between md:min-w-980">
+    <header className="fixed top-0 left-0 right-0 z-10 bg-accent flex flex-wrap justify-between md:min-w-980">
       <div className="flex-grow p-4 md:flex-none md:px-8">
         <Link to="/">
           <h1 className="flex items-center text-white">
