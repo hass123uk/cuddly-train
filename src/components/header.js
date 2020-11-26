@@ -17,7 +17,7 @@ function Header({ className }) {
 
   return (
     <header className={`${className} bg-accent flex flex-wrap justify-between`}>
-      <div className="flex-grow p-4 md:flex-none md:px-8">
+      <div className="flex-grow p-4 lg:flex-none lg:px-8">
         <Link to="/">
           <h1 className="flex items-center text-white">
             <span className="text-xl font-bold tracking-tight">
@@ -27,7 +27,7 @@ function Header({ className }) {
           <p className="text-sm text-white">{site.siteMetadata.description}</p>
         </Link>
       </div>
-      <div className="bg-main flex md:flex-grow md:justify-between">
+      <div className="bg-main flex lg:flex-grow lg:justify-between">
         <div className="flex">{/* TODO: Add navigation. */}</div>
         <div className="flex flex-col justify-center">
           {/* <Link>

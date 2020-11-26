@@ -27,16 +27,16 @@ Input.propTypes = {
 
 export default function ContactForm() {
   return (
-    <div className="md:flex">
-      {/* className="mx-auto md:w-1/2" */}
-      <div className="md:px-28 md:my-auto leading-loose text-center md:text-left">
-        <h1 className="text-xl font-bold text-accent md:text-4xl md:mb-32">
+    <div className="lg:flex">
+      {/* className="mx-auto lg:w-1/2" */}
+      <div className="lg:px-28 lg:my-auto leading-loose text-center lg:text-left">
+        <h1 className="text-xl font-bold text-accent lg:text-4xl lg:mb-32">
           Let&apos;s Connect
         </h1>
-        <p className="mb-8 text-sm md:text-xl">
+        <p className="mb-8 text-sm lg:text-xl">
           <a href="mailto:info@dianemahmud.com">info@dianemahmud.com</a>
         </p>
-        {/* <div className="flex justify-center md:justify-start mb-16">
+        {/* <div className="flex justify-center lg:justify-start mb-16">
           <Link>
             <img alt="Facebook icon" className="w-8 h-8 mr-2" src={fbImg}></img>
           </Link>
@@ -45,12 +45,12 @@ export default function ContactForm() {
           </Link>
         </div> */}
       </div>
-      <form className="md:flex-auto">
-        <div className="md:flex">
-          <div className="md:flex-auto md:pr-12">
+      <form className="lg:flex-auto">
+        <div className="lg:flex">
+          <div className="lg:flex-auto lg:pr-12">
             <Input id="first-name" label="First Name" />
           </div>
-          <div className="md:flex-auto">
+          <div className="lg:flex-auto">
             <Input id="last-name" label="Last Name" />
           </div>
         </div>
