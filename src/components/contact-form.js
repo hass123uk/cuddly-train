@@ -34,7 +34,7 @@ export default function ContactForm() {
           Let&apos;s Connect
         </h1>
         <p className="mb-8 text-sm md:text-xl">
-          <a href="mailto:someone@example.com">info@example.com</a>
+          <a href="mailto:info@dianemahmud.com">info@dianemahmud.com</a>
         </p>
         {/* <div className="flex justify-center md:justify-start mb-16">
           <Link>
