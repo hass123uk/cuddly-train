@@ -21,7 +21,7 @@ module.exports = {
         background_color: fullConfig.theme.colors.accent3,
         theme_color: fullConfig.theme.colors.blue["700"],
         display: `minimal-ui`,
-        //icon: `src/images/tailwind-icon.png`,
+        icon: `src/images/icon.png`,
       },
     },
     {
