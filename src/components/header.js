@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery, Link } from "gatsby";
 import React from "react";
 import PropTypes from "prop-types";
-import fbImg from "../images/fb.webp";
+// import fbImg from "../images/fb.webp";
 
 function Header({ className }) {
   const { site } = useStaticQuery(graphql`
@@ -30,13 +30,13 @@ function Header({ className }) {
       <div className="bg-main flex md:flex-grow md:justify-between">
         <div className="flex">{/* TODO: Add navigation. */}</div>
         <div className="flex flex-col justify-center">
-          <Link>
+          {/* <Link>
             <img
               alt="Facebook icon"
               className="w-8 h-8 block mx-3 my-1 rounded-full"
               src={fbImg}
             ></img>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </header>

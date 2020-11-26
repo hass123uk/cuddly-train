@@ -1,8 +1,8 @@
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
 import Proptypes from "prop-types";
 import React from "react";
-import fbImg from "../images/fb.png";
-import inImg from "../images/in2.png";
+// import fbImg from "../images/fb.png";
+// import inImg from "../images/in2.png";
 
 function Input({ id, label }) {
   return (
@@ -36,14 +36,14 @@ export default function ContactForm() {
         <p className="mb-8 text-sm md:text-xl">
           <a href="mailto:someone@example.com">info@example.com</a>
         </p>
-        <div className="flex justify-center md:justify-start mb-16">
+        {/* <div className="flex justify-center md:justify-start mb-16">
           <Link>
             <img alt="Facebook icon" className="w-8 h-8 mr-2" src={fbImg}></img>
           </Link>
           <Link>
             <img alt="LinkedIn icon" className="w-8 h-8" src={inImg}></img>
           </Link>
-        </div>
+        </div> */}
       </div>
       <form className="md:flex-auto">
         <div className="md:flex">
