@@ -57,7 +57,7 @@ function IndexPage() {
       </Container>
 
       <Container className="bg-main text-white">
-        <section id="contact">
+        <section id="contact" style={{scrollMarginTop: "6rem"}}>
           <ContactForm />
         </section>
       </Container>
