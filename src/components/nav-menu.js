@@ -44,7 +44,7 @@ function BurgerMenu({ links }) {
       </button>
       {isExpanded ? <MobileFullScreenNavMenu links={links} /> : null}
 
-      <nav className="hidden md:block md:flex md:items-center w-full md:w-auto">
+      <nav className="hidden md:flex md:items-center w-full md:w-auto">
         {links.map((link) => (
           <Link
             className="block mt-4 text-white hover:text-accent no-underline md:inline-block md:mt-0 md:ml-6"
