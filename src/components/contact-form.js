@@ -56,7 +56,7 @@ export default function ContactForm() {
         data-netlify="true"
         className="lg:flex-auto"
       >
-        <input type="hidden" name="form-name" value="Contact Form" />
+        <input type="hidden" name="form-name" value="contact" />
         <p className="hidden">
           <label>
             Don’t fill this out if you&apos;re human: <input name="bot-field" />
