@@ -51,6 +51,7 @@ export default function ContactForm() {
       <form
         name="contact"
         method="POST"
+        action="/"
         netlify-honeypot="bot-field"
         data-netlify="true"
         className="lg:flex-auto"
