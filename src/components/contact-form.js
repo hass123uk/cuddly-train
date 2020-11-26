@@ -45,7 +45,7 @@ export default function ContactForm() {
           </Link>
         </div> */}
       </div>
-      <form className="lg:flex-auto">
+      <form name="contact" method="POST" data-netlify="true" className="lg:flex-auto">
         <div className="lg:flex">
           <div className="lg:flex-auto lg:pr-12">
             <Input id="first-name" label="First Name" />
