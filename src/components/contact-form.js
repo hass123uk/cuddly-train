@@ -4,7 +4,7 @@ import React from "react";
 // import fbImg from "../images/fb.png";
 // import inImg from "../images/in2.png";
 
-function Input({ id, label }) {
+function Input({ id, label, type }) {
   return (
     <>
       <label className="block mb-2 text-xs font-bold uppercase" htmlFor={id}>
@@ -14,7 +14,7 @@ function Input({ id, label }) {
       <input
         className="w-full mb-6 form-input bg-main text-white border-white border-0 border-b-2"
         id={id}
-        type="text"
+        type={type}
       />
     </>
   );
@@ -23,6 +23,7 @@ function Input({ id, label }) {
 Input.propTypes = {
   id: Proptypes.string.isRequired,
   label: Proptypes.string.isRequired,
+  type: Proptypes.string.isRequired,
 };
 
 export default function ContactForm() {
@@ -61,13 +62,13 @@ export default function ContactForm() {
 
         <div className="lg:flex">
           <div className="lg:flex-auto lg:pr-12">
-            <Input id="first-name" label="First Name" />
+            <Input id="first-name" label="First Name" type="text" />
           </div>
           <div className="lg:flex-auto">
-            <Input id="last-name" label="Last Name" />
+            <Input id="last-name" label="Last Name" type="text" />
           </div>
         </div>
-        <Input id="email" label="Email" />
+        <Input id="email" label="Email" type="email" />
 
         <label
           className="block mb-2 text-xs font-bold uppercase"
