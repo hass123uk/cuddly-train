@@ -37,7 +37,7 @@ function Landing() {
             />
 
             <div
-              style={{ "max-width": "217px", height: 600, width: 217 }}
+              style={{ maxWidth: "217px", height: 600, width: 217 }}
               className="hidden md:block bg-accent md:ml-auto md:mt-32"
             ></div>
           </div>
