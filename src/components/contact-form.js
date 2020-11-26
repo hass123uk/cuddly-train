@@ -15,6 +15,7 @@ function Input({ id, label, type }) {
         className="w-full mb-6 form-input bg-main text-white border-white border-0 border-b-2"
         id={id}
         type={type}
+        required
       />
     </>
   );
@@ -82,6 +83,7 @@ export default function ContactForm() {
           id="message"
           placeholder="Say something..."
           rows="8"
+          required
         />
 
         <div className="text-center">
