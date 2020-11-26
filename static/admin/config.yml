@@ -1,0 +1,44 @@
+backend:
+  name: git-gateway
+
+media_folder: static/assets
+public_folder: /assets
+
+display_url: https://dianemahmud.com/
+
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - file: content/pages/home.md
+        label: Home
+        name: home
+        fields:
+          - {
+              label: "Template",
+              name: "template name",
+              widget: "hidden",
+              default: "HomePageTemplate",
+            }
+          - {
+              label: "Portrait Image",
+              name: "portraitImage",
+              widget: "object",
+              fields:
+                [
+                  { label: "Image", name: "image", widget: "image" },
+                  {
+                    label: "Image Description",
+                    name: "imageAlt",
+                    widget: "string",
+                  },
+                ],
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subTitle", widget: "string" }
+          - {
+              label: "Contact Me button",
+              name: "goToContactButton",
+              widget: "string",
+              hint: "This button takes the user to the 'contact me' section.",
+            }
