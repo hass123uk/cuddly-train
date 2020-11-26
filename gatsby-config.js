@@ -10,6 +10,7 @@ module.exports = {
     author: `@hass123uk`,
   },
   plugins: [
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-eslint`,
     `gatsby-plugin-react-helmet`,
     {
