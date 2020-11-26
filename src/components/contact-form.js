@@ -45,7 +45,20 @@ export default function ContactForm() {
           </Link>
         </div> */}
       </div>
-      <form name="contact" method="POST" data-netlify="true" className="lg:flex-auto">
+      <form
+        name="contact"
+        method="POST"
+        netlify-honeypot="bot-field"
+        data-netlify="true"
+        className="lg:flex-auto"
+      >
+
+        <p className="hidden">
+          <label>
+            Don’t fill this out if you&apos;re human: <input name="bot-field" />
+          </label>
+        </p>
+
         <div className="lg:flex">
           <div className="lg:flex-auto lg:pr-12">
             <Input id="first-name" label="First Name" />
