@@ -14,6 +14,7 @@ function Input({ id, label, type }) {
       <input
         className="w-full mb-6 form-input bg-main text-white border-white border-0 border-b-2"
         id={id}
+        name={id}
         type={type}
         required
       />
@@ -54,7 +55,7 @@ export default function ContactForm() {
         data-netlify="true"
         className="lg:flex-auto"
       >
-
+        <input type="hidden" name="form-name" value="Contact Form" />
         <p className="hidden">
           <label>
             Don’t fill this out if you&apos;re human: <input name="bot-field" />
@@ -81,6 +82,7 @@ export default function ContactForm() {
         <textarea
           className="w-full mb-6 form-textarea bg-main border-white border-0 border-b-2 placeholder-white"
           id="message"
+          name="message"
           placeholder="Say something..."
           rows="8"
           required
