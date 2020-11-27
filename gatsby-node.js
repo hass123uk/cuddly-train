@@ -33,12 +33,8 @@ exports.createPages = async function createPages({
   }
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    const pathName =
-      node.frontmatter.templateKey === "homeTemplate"
-        ? "/"
-        : node.frontmatter.path || node.fields.slug;
     createPage({
-      path: pathName,
+      path: node.frontmatter.path || node.fields.slug,
       component: path.resolve(
         `src/templates/${String(node.frontmatter.templateKey)}.js`
       ),
