@@ -10,7 +10,6 @@ module.exports = {
     author: `@hass123uk`,
   },
   plugins: [
-    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-eslint`,
     `gatsby-plugin-react-helmet`,
     {
@@ -95,6 +94,12 @@ module.exports = {
         rule: {
           include: /\.inline\.svg$/,
         },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
     `gatsby-plugin-offline`,
