@@ -13,6 +13,7 @@ export function HomePageTemplate({
   goToContactButtonText,
   myStory,
   myMission,
+  contactMe,
 }) {
   const portraitImageSrc = portraitImage.image.childImageSharp
     ? portraitImage.image.childImageSharp.fluid.src
@@ -80,14 +81,12 @@ export function HomePageTemplate({
         <h2 className="text-2xl text-main font-bold leading-loose lg:text-4xl lg:mb-4">
           {myMission.title}
         </h2>
-        <p className="leading-loose">
-          {myMission.content}
-        </p>
+        <p className="leading-loose">{myMission.content}</p>
       </Container>
 
       <Container className="bg-main text-white">
         <section id="contact" style={{ scrollMarginTop: "6rem" }}>
-          <ContactForm />
+          <ContactForm cmsData={contactMe} />
         </section>
       </Container>
     </>
@@ -110,6 +109,7 @@ HomePageTemplate.propTypes = {
     title: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
   }),
+  contactMe: PropTypes.object.isRequired,
 };
 
 export default function HomePage({ data }) {
@@ -124,6 +124,7 @@ export default function HomePage({ data }) {
         goToContactButtonText={frontmatter.goToContactButtonText}
         myStory={frontmatter.myStory}
         myMission={frontmatter.myMission}
+        contactMe={frontmatter.contactMe}
       />
     </Layout>
   );
@@ -162,6 +163,12 @@ export const pageQuery = graphql`
         myMission {
           title
           content
+        }
+        contactMe {
+          title
+          email
+          messagePlaceHolder
+          showNameFields
         }
       }
     }

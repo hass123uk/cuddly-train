@@ -33,4 +33,8 @@ myMission:
     maelstrom of impulses and passions, of cruelty, ecstacy, and madness,
     than is apparent to the civilized being who glides on the surface and
     fits smoothly into the world.
+contactMe: 
+  title: Let's Connect
+  email: info@dianemahmud.com
+  messagePlaceHolder: Let me know how I can help.
 ---

@@ -12,16 +12,15 @@ const HomePagePreview = ({ entry, getAsset }) => {
   if (data.portraitImage.image)
     data.portraitImage.image = getAsset(data.portraitImage.image);
 
-  console.log(data);
-
   return (
     <HomePageTemplate
-      portraitImage={data.portraitImage}
+      portraitImage={data.portraitImage || {}}
       title={data.title}
       subTitle={data.subTitle}
       goToContactButtonText={data.goToContactButtonText}
-      myStory={data.myStory}
-      myMission={data.myMission}
+      myStory={data.myStory || {}}
+      myMission={data.myMission || {}}
+      contactMe={data.contactMe || {}}
     />
   );
 };

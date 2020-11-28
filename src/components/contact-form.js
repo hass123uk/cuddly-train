@@ -1,8 +1,6 @@
 // import { Link } from "gatsby";
-import Proptypes from "prop-types";
+import PropTypes from "prop-types";
 import React from "react";
-// import fbImg from "../images/fb.png";
-// import inImg from "../images/in2.png";
 
 function Input({ id, label, type }) {
   return (
@@ -23,21 +21,21 @@ function Input({ id, label, type }) {
 }
 
 Input.propTypes = {
-  id: Proptypes.string.isRequired,
-  label: Proptypes.string.isRequired,
-  type: Proptypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
 };
 
-export default function ContactForm() {
+export default function ContactForm({ cmsData }) {
   return (
     <div className="lg:flex">
       {/* className="mx-auto lg:w-1/2" */}
       <div className="lg:px-28 lg:my-auto leading-loose text-center lg:text-left">
         <h1 className="text-xl font-bold text-accent lg:text-4xl lg:mb-32">
-          Let&apos;s Connect
+          {cmsData.title}
         </h1>
         <p className="mb-8 text-sm lg:text-xl">
-          <a href="mailto:info@dianemahmud.com">info@dianemahmud.com</a>
+          <a href={`mailto:${cmsData.email}`}>{cmsData.email}</a>
         </p>
         {/* <div className="flex justify-center lg:justify-start mb-16">
           <Link>
@@ -63,14 +61,17 @@ export default function ContactForm() {
           </label>
         </p>
 
-        <div className="lg:flex">
-          <div className="lg:flex-auto lg:pr-12">
-            <Input id="first-name" label="First Name" type="text" />
+        {cmsData.showNameFields && (
+          <div className="lg:flex">
+            <div className="lg:flex-auto lg:pr-12">
+              <Input id="first-name" label="First Name" type="text" />
+            </div>
+            <div className="lg:flex-auto">
+              <Input id="last-name" label="Last Name" type="text" />
+            </div>
           </div>
-          <div className="lg:flex-auto">
-            <Input id="last-name" label="Last Name" type="text" />
-          </div>
-        </div>
+        )}
+
         <Input id="email" label="Email" type="email" />
 
         <label
@@ -84,7 +85,7 @@ export default function ContactForm() {
           className="w-full mb-6 form-textarea bg-main border-white border-0 border-b-2 placeholder-white"
           id="message"
           name="message"
-          placeholder="Say something..."
+          placeholder={cmsData.messagePlaceHolder}
           rows="8"
           required
         />
@@ -98,3 +99,12 @@ export default function ContactForm() {
     </div>
   );
 }
+
+ContactForm.propTypes = {
+  cmsData: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    messagePlaceHolder: PropTypes.string.isRequired,
+    showNameFields: PropTypes.bool,
+  }),
+};

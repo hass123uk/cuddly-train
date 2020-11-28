@@ -64,3 +64,31 @@ collections:
                   { label: Content, name: content, widget: text },
                 ],
             }
+          - {
+              label: "Contact Me",
+              name: contactMe,
+              widget: object,
+              fields:
+                [
+                  { label: Title, name: title, widget: string },
+                  {
+                    label: Email,
+                    name: email,
+                    widget: string,
+                    hint: "An email address you do not mind sharing publicly. Must be a valid email address.",
+                  },
+                  {
+                    label: "Message Placeholder",
+                    name: messagePlaceHolder,
+                    widget: string,
+                    hint: "The text that shows up in the message box before someone starts typing.",
+                  },
+                  {
+                    label: "Show first & last name fields",
+                    name: showNameFields,
+                    widget: boolean,
+                    default: true,
+                    hint: "If this is true then the first and last name fields are shown."
+                  }
+                ],
+            }
