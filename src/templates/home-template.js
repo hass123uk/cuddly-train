@@ -97,7 +97,7 @@ export function HomePageTemplate({
 }
 HomePageTemplate.propTypes = {
   portraitImage: PropTypes.shape({
-    image: PropTypes.string.isRequired,
+    image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
     imageAlt: PropTypes.string.isRequired,
   }),
   title: PropTypes.string.isRequired,
