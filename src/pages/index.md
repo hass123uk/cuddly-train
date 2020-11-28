@@ -37,4 +37,5 @@ contactMe:
   title: Let's Connect
   email: info@dianemahmud.com
   messagePlaceHolder: Let me know how I can help.
+  showNameFields: true
 ---
