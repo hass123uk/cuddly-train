@@ -12,6 +12,7 @@ export function HomePageTemplate({
   subTitle,
   goToContactButtonText,
   myStory,
+  myMission,
 }) {
   const portraitImageSrc = portraitImage.image.childImageSharp
     ? portraitImage.image.childImageSharp.fluid.src
@@ -77,14 +78,10 @@ export function HomePageTemplate({
 
       <Container className="bg-accent2 text-center lg:text-left lg:p-32 lg:w-2/3">
         <h2 className="text-2xl text-main font-bold leading-loose lg:text-4xl lg:mb-4">
-          My Mission
+          {myMission.title}
         </h2>
         <p className="leading-loose">
-          The point is... to live one&apos;s life in the full complexity of what
-          one is, which is something much darker, more contradictory, more of a
-          maelstrom of impulses and passions, of cruelty, ecstacy, and madness,
-          than is apparent to the civilized being who glides on the surface and
-          fits smoothly into the world.
+          {myMission.content}
         </p>
       </Container>
 
@@ -109,6 +106,10 @@ HomePageTemplate.propTypes = {
     content: PropTypes.string.isRequired,
     quote: PropTypes.string.isRequired,
   }),
+  myMission: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+  }),
 };
 
 export default function HomePage({ data }) {
@@ -122,6 +123,7 @@ export default function HomePage({ data }) {
         subTitle={frontmatter.subTitle}
         goToContactButtonText={frontmatter.goToContactButtonText}
         myStory={frontmatter.myStory}
+        myMission={frontmatter.myMission}
       />
     </Layout>
   );
@@ -156,6 +158,10 @@ export const pageQuery = graphql`
           title
           content
           quote
+        }
+        myMission {
+          title
+          content
         }
       }
     }

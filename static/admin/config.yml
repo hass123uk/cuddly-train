@@ -54,3 +54,13 @@ collections:
                   { label: Quote, name: quote, widget: text },
                 ],
             }
+          - {
+              label: "My Mission",
+              name: myMission,
+              widget: object,
+              fields:
+                [
+                  { label: Title, name: title, widget: string },
+                  { label: Content, name: content, widget: text },
+                ],
+            }

@@ -25,4 +25,12 @@ myStory:
     being who glides on the surface and fits smoothly into the world.
   quote: >
     You either take control of your love life or it takes control of you. It’s that simple.
+myMission:
+  title: My Mission
+  content: >
+    The point is... to live one's life in the full complexity of what
+    one is, which is something much darker, more contradictory, more of a
+    maelstrom of impulses and passions, of cruelty, ecstacy, and madness,
+    than is apparent to the civilized being who glides on the surface and
+    fits smoothly into the world.
 ---
