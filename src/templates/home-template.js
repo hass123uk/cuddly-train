@@ -139,7 +139,7 @@ HomePage.propTypes = {
 
 export const pageQuery = graphql`
   query HomePageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "homeTemplate" } }) {
+    markdownRemark(frontmatter: { templateKey: { eq: "home-template" } }) {
       frontmatter {
         portraitImage {
           image {
