@@ -85,7 +85,10 @@ export function HomePageTemplate({
       </Container>
 
       <Container className="bg-main text-white">
-        <section id="contact" style={{ scrollMarginTop: "6rem" }}>
+        <section
+          id="contact"
+          style={{ scrollMarginTop: "6rem", scrollSnapMargin: "6rem" }}
+        >
           <ContactForm cmsData={contactMe} />
         </section>
       </Container>
