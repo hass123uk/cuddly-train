@@ -20,6 +20,7 @@ const HomePagePreview = ({ entry, getAsset }) => {
       title={data.title}
       subTitle={data.subTitle}
       goToContactButtonText={data.goToContactButtonText}
+      myStory={data.myStory}
     />
   );
 };

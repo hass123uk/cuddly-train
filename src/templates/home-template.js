@@ -11,6 +11,7 @@ export function HomePageTemplate({
   title,
   subTitle,
   goToContactButtonText,
+  myStory,
 }) {
   const portraitImageSrc = portraitImage.image.childImageSharp
     ? portraitImage.image.childImageSharp.fluid.src
@@ -60,31 +61,15 @@ export function HomePageTemplate({
       <div className="lg:flex">
         <Container className="bg-accent text-white text-center lg:text-left lg:p-32 lg:flex-1">
           <h1 className="text-4xl font-bold leading-loose lg:text-6xl lg:mb-4">
-            My story
+            {myStory.title}
           </h1>
-          <p className="leading-loose">
-            The point is... to live one&apos;s life in the full complexity of
-            what one is, which is something much darker, more contradictory,
-            more of a maelstrom of impulses and passions, of cruelty, ecstacy,
-            and madness, than is apparent to the civilized being who glides on
-            the surface and fits smoothly into the world. The point is... to
-            live one&apos;s life in the full complexity of what one is, which is
-            something much darker, more contradictory, more of a maelstrom of
-            impulses and passions, of cruelty, ecstacy, and madness, than is
-            apparent to the civilized being who glides on the surface and fits
-            smoothly into the world. The point is... to live one&apos;s life in
-            the full complexity of what one is, which is something much darker,
-            more contradictory, more of a maelstrom of impulses and passions, of
-            cruelty, ecstacy, and madness, than is apparent to the civilized
-            being who glides on the surface and fits smoothly into the world.
-          </p>
+          <p className="leading-loose">{myStory.content}</p>
         </Container>
 
         <Container className="bg-accent2 lg:flex-1 lg:my-auto">
           <div className="border rounded border-main p-3 lg:p-12">
             <p className="text-center text-main text-2xl font-thin lg:font-normal lg:text-5xl">
-              &quot;You either take control of your love life or it takes
-              control of you. It’s that simple.&quot;
+              &quot;{myStory.quote}&quot;
             </p>
           </div>
         </Container>
@@ -113,12 +98,17 @@ export function HomePageTemplate({
 }
 HomePageTemplate.propTypes = {
   portraitImage: PropTypes.shape({
-    image: PropTypes.string,
-    imageAlt: PropTypes.string,
+    image: PropTypes.string.isRequired,
+    imageAlt: PropTypes.string.isRequired,
   }),
-  title: PropTypes.string,
-  subTitle: PropTypes.string,
-  goToContactButtonText: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  subTitle: PropTypes.string.isRequired,
+  goToContactButtonText: PropTypes.string.isRequired,
+  myStory: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+    quote: PropTypes.string.isRequired,
+  }),
 };
 
 export default function HomePage({ data }) {
@@ -131,6 +121,7 @@ export default function HomePage({ data }) {
         title={frontmatter.title}
         subTitle={frontmatter.subTitle}
         goToContactButtonText={frontmatter.goToContactButtonText}
+        myStory={frontmatter.myStory}
       />
     </Layout>
   );
@@ -161,6 +152,11 @@ export const pageQuery = graphql`
         title
         subTitle
         goToContactButtonText
+        myStory {
+          title
+          content
+          quote
+        }
       }
     }
   }
