@@ -1,5 +1,5 @@
 ---
-templateKey: homeTemplate
+templateKey: home-template
 portraitImage:
   image: /images/portrait.jpg
   imageAlt: A picture of a woman smiling
