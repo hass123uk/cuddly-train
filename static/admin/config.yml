@@ -20,7 +20,7 @@ collections:
               label: "Template",
               name: "template name",
               widget: "hidden",
-              default: "homeTemplate",
+              default: "home-template",
             }
           - {
               label: "Portrait Image",
