@@ -1,6 +1,7 @@
 backend:
-  #name: test-repo #Include this when you want to test locally. Very limited testing can be done.
   name: git-gateway
+
+local_backend: true
 
 media_folder: static/assets
 public_folder: /assets
