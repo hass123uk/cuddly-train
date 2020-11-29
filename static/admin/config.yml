@@ -73,10 +73,25 @@ collections:
                 [
                   { label: Title, name: title, widget: string },
                   {
-                    label: Email,
+                    label: "Email",
                     name: email,
-                    widget: string,
-                    hint: "An email address you do not mind sharing publicly. Must be a valid email address.",
+                    widget: object,
+                    fields:
+                      [
+                        {
+                          label: "Show email",
+                          name: showEmail,
+                          widget: boolean,
+                          default: true,
+                          hint: "If this is true then the email will not be shown.",
+                        },
+                        {
+                          label: Email,
+                          name: email,
+                          widget: string,
+                          hint: "An email address you do not mind sharing publicly.",
+                        },
+                      ],
                   },
                   {
                     label: "Message Placeholder",
@@ -89,7 +104,7 @@ collections:
                     name: showNameFields,
                     widget: boolean,
                     default: true,
-                    hint: "If this is true then the first and last name fields are shown."
-                  }
+                    hint: "If this is true then the first and last name fields are shown.",
+                  },
                 ],
             }

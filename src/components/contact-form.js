@@ -34,9 +34,13 @@ export default function ContactForm({ cmsData }) {
         <h1 className="text-xl font-bold text-accent lg:text-4xl lg:mb-32">
           {cmsData.title}
         </h1>
-        <p className="mb-8 text-sm lg:text-xl">
-          <a href={`mailto:${cmsData.email}`}>{cmsData.email}</a>
-        </p>
+
+        {cmsData.email && cmsData.email.showEmail && (
+          <p className="mb-8 text-sm lg:text-xl">
+            <a href={`mailto:${cmsData.email.email}`}>{cmsData.email.email}</a>
+          </p>
+        )}
+
         {/* <div className="flex justify-center lg:justify-start mb-16">
           <Link>
             <img alt="Facebook icon" className="w-8 h-8 mr-2" src={fbImg}></img>
@@ -103,7 +107,10 @@ export default function ContactForm({ cmsData }) {
 ContactForm.propTypes = {
   cmsData: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
+    email: PropTypes.shape({
+      email: PropTypes.string.isRequired,
+      showEmail: PropTypes.bool,
+    }),
     messagePlaceHolder: PropTypes.string.isRequired,
     showNameFields: PropTypes.bool,
   }),

@@ -35,7 +35,9 @@ myMission:
     fits smoothly into the world.
 contactMe: 
   title: Let's Connect
-  email: info@dianemahmud.com
+  email:
+    email: info@dianemahmud.com
+    showEmail: false
   messagePlaceHolder: Let me know how I can help.
   showNameFields: true
 ---

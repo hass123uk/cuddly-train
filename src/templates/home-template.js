@@ -169,7 +169,10 @@ export const pageQuery = graphql`
         }
         contactMe {
           title
-          email
+          email {
+            email
+            showEmail
+          }
           messagePlaceHolder
           showNameFields
         }
