@@ -43,7 +43,7 @@
     "develop": "gatsby develop",
     "dev": "npm run develop",
     "start:cms": "npx netlify-cms-proxy-server",
-    "start": "npm run develop",
+    "start": "npm run clean && npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
