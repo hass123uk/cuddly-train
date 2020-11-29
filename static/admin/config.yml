@@ -18,7 +18,7 @@ collections:
         fields:
           - {
               label: "Template",
-              name: "template name",
+              name: "templateKey",
               widget: "hidden",
               default: "home-template",
             }
@@ -114,7 +114,7 @@ collections:
         fields:
           - {
               label: "Template",
-              name: "template name",
+              name: "templateKey",
               widget: "hidden",
               default: "blog-template",
             }
