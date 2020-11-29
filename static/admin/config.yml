@@ -108,3 +108,15 @@ collections:
                   },
                 ],
             }
+      - file: src/pages/blog/index.md
+        label: "Blog Page"
+        name: blog
+        fields:
+          - {
+              label: "Template",
+              name: "template name",
+              widget: "hidden",
+              default: "blog-template",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "content", widget: "text" }
