@@ -9,30 +9,28 @@ goToContactButtonText: Work with me
 myStory:
   title: My story
   content: >
-    The point is... to live one's life in the full complexity of what one is,
-    which is something much darker, more contradictory, more of a maelstrom of
-    impulses and passions, of cruelty, ecstacy, and madness, than is apparent to
-    the civilized being who glides on the surface and fits smoothly into the
-    world. The point is... to live one's life in the full complexity of what one
-    is, which is something much darker, more contradictory, more of a maelstrom
-    of impulses and passions, of cruelty, ecstacy, and madness, than is apparent
-    to the civilized being who glides on the surface and fits smoothly into the
-    world. The point is... to live one's life in the full complexity of what one
-    is, which is something much darker, more contradictory, more of a maelstrom
-    of impulses and passions, of cruelty, ecstacy, and madness, than is apparent
-    to the civilized being who glides on the surface and fits smoothly into the
-    world.
+    What do you do when things go wrong, I mean really wrong?  What happens when
+    the physical and mental resources you once had available disappear all at
+    once?  There is heartbreak and then there are those events in life that
+    destroy the fabric of who you are.  I have been there and I'm now committed
+    to helping women who are going through the same.  There is a way back, not
+    to the same life you had but to a different life.   Let me help you find
+    your way back to the life you deserve.  Let me help you release the guilt
+    and the shame you may have with moving on.  
   quote: >
     You either take control of your life or it takes control of you. It’s that
     simple.
 myMission:
   title: My Mission
   content: >
-    The point is... to live one's life in the full complexity of what one is,
-    which is something much darker, more contradictory, more of a maelstrom of
-    impulses and passions, of cruelty, ecstacy, and madness, than is apparent to
-    the civilized being who glides on the surface and fits smoothly into the
-    world.
+    What do you do when things go wrong, I mean really wrong?  What happens when
+    the physical and mental resources you once had available disappear all at
+    once?  There is heartbreak and then there are those events in life that
+    destroy the fabric of who you are.  I have been there and I'm now committed
+    to helping women who are going through the same.  There is a way back, not
+    to the same life you had but to a different life.   Let me help you find
+    your way back to the life you deserve.  Let me help you release the guilt
+    and the shame you may have with moving on.  
 contactMe:
   title: Let's Connect
   email:
