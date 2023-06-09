@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "author": "Hassan Mahmud",
   "dependencies": {
-    "gatsby": "^2.27.4",
+    "gatsby": "^4.25.7",
     "gatsby-image": "^2.6.0",
     "gatsby-plugin-manifest": "2.7.0",
     "gatsby-plugin-netlify-cms": "^4.5.0",
